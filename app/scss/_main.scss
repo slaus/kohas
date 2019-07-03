@@ -1,0 +1,140 @@
+/*!
+ * Main content
+ */
+
+.main {
+
+  & .title a {
+    transition: .3s;
+
+    &:hover {
+      transition: .3s;
+      padding-left: 20px;
+    }
+  }
+
+  & .products {
+
+    & .price {
+
+      & span.price {
+        font-size: 36px;
+        font-weight: bold;
+      }
+    }
+
+    &-item {
+      background: $white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: inline-block;
+      width: calc(50% - 12px);
+
+      @include sm() {
+        width: 100%;
+      }
+      @include xs() {
+        width: 100%;
+      }
+
+      & .title {
+        font-size: 24px;
+
+        & a {
+          color: $black;
+
+          &:hover {
+            color: $brown;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    & a {
+      color: $black;
+      
+      &:hover {
+        color: $brown;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  & .search {
+    position: relative;
+  
+    & input {
+      width: 100%;
+      height: 52px;
+      border: none;
+      border-radius: 10px !important;
+    }
+
+    & .input-group-btn {
+      position: absolute;
+      right: 3px;
+      top: 4px;
+
+      & button {
+        background: transparent;
+      }
+    }
+  }
+
+  & .articles {
+
+    &-right {
+      margin-top: 0;
+
+      & .tags a {
+        font-size: 16px;
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    & .pagination {
+
+
+      & .page-item {
+
+        &.active a, &:hover:not(.disabled) a {
+          color: $brown;
+        }
+
+        & .page-link {
+          color: $black;
+          border: none;
+          background: transparent;
+        }
+      }
+    }
+
+    &-item {
+      background: $white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+
+      & .title.tag {
+        background: $brown;
+        color: $white;
+        line-height: 46px;
+        border-radius: 10px 10px 0 0;
+      }
+
+      & .fa {
+        color: $brown;
+      }
+
+      & a {
+        color: $black;
+
+        &:hover {
+          color: $brown;
+        }
+      }
+    }
+  }
+}
